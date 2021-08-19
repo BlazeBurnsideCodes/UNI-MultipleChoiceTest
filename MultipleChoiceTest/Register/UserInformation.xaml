@@ -1,0 +1,41 @@
+﻿<Window x:Class="MultipleChoiceTest.Register.UserInformation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MultipleChoiceTest.Register"
+        mc:Ignorable="d"
+        Title="UserInformation" 
+        Height="700" Width="590" 
+        MinHeight="700" MinWidth="590"
+        MaxHeight="700" MaxWidth="590"
+        WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" Closed="Window_Closed">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="1,0" EndPoint="0,1">
+                <GradientStop Color="#0fbed8" Offset="0.0" />
+                <GradientStop Color="LimeGreen" Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Label Content="Register"  FontSize="30" HorizontalAlignment="Left" Height="55" Margin="10,10,0,0" VerticalAlignment="Top" Width="123" BorderBrush="Black" BorderThickness="0,0,0,2"/>
+
+
+        <ListBox FontSize="20" Background="Transparent" BorderBrush="Black" BorderThickness="3" HorizontalAlignment="Left" Height="231" Margin="84,309,0,0" VerticalAlignment="Top" Width="175" ItemsSource="{Binding IncludedModules}"/>
+
+
+        <ComboBox Name="cmbExcludedModule" FontSize="15" HorizontalAlignment="Left" Margin="308,309,0,0" VerticalAlignment="Top" Width="154" Height="35" ItemsSource="{Binding ExcludedModules}"/>
+        <Button Name="btnAddModule" FontSize="15" Content="Add Module" HorizontalAlignment="Left" Margin="324,365,0,0" VerticalAlignment="Top" Width="117" Click="BtnAddModule_Click" Height="36" RenderTransformOrigin="0.863,0.533"/>
+        <ComboBox Name="cmbIncludedModule" FontSize="15"  HorizontalAlignment="Left" Margin="308,447,0,0" VerticalAlignment="Top" Width="154" ItemsSource="{Binding IncludedModules}" Height="35"/>
+        <Button Name="btnRemoveModule" FontSize="15" Content="Remove Module" HorizontalAlignment="Left" Margin="324,504,0,0" VerticalAlignment="Top" Width="117" Click="BtnRemoveModule_Click" Height="36"/>
+        <Label Content="First Name:" FontSize="20" VerticalContentAlignment="Center"  HorizontalAlignment="Left" Margin="10,99,0,0" VerticalAlignment="Top" Height="45" Width="152"/>
+        <Label Content="Surname:" FontSize="20" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="10,177,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.115,2.062" Height="45" Width="152"/>
+        <TextBox Name="txtFirstName" FontSize="20" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="45" Margin="167,99,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="362" MaxLength="25" Background="Transparent"  BorderBrush="Black" BorderThickness="0,3,0,3"/>
+        <TextBox Name="txtSurname" FontSize="20" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="45" Margin="167,177,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="362" MaxLength="25" Background="Transparent"  BorderBrush="Black" BorderThickness="0,3,0,3"/>
+        <Button Name="btnSubmit" Content="Submit" FontSize="20" Margin="210,587,210,0" VerticalAlignment="Top" Height="43" Click="BtnSubmit_Click"/>
+        <Label Content="Subscribe to tests from modules:" FontSize="20" Height="37" Margin="140,245,140,0" VerticalAlignment="Top"/>
+
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,61 @@
+﻿<Window x:Class="MultipleChoiceTest.Lecturer.TestViewCreate"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MultipleChoiceTest.Lecturer"
+        mc:Ignorable="d"
+        Title="TestViewCreate" 
+        Height="563" MaxHeight="563" MinHeight="563" 
+        Width="1025" MaxWidth="1025" MinWidth="1025"
+        WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" Closed="Window_Closed">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="1,0" EndPoint="0,1">
+                <GradientStop Color="#0fbed8" Offset="0.0" />
+                <GradientStop Color="LimeGreen" Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Rectangle Fill="#61c7bf" Stroke="Black" StrokeThickness="3" HorizontalAlignment="Left" Height="442" VerticalAlignment="Top" Width="760" Margin="246,72,0,0" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+
+
+
+
+        <Label x:Name="lblQuestionX" Content="Question X" HorizontalAlignment="Left" Margin="251,89,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.125,-0.578" Height="46" Width="331" FontSize="20"/>
+        <ListBox x:Name="lstQuestions" BorderBrush="Black" BorderThickness="3" HorizontalAlignment="Left" Width="214" Margin="10,48,0,22.6" Background="Transparent" SelectionChanged="LstQuestions_SelectionChanged"/>
+        <Label Content="Questions" FontFamily="Tahoma" FontWeight="Bold" HorizontalContentAlignment="Center"  HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.125,-0.578" Height="38" Width="214" FontSize="20"/>
+
+        <Button x:Name="btnSaveQuestion" Background="#b19cd9" Content="Save Question" HorizontalAlignment="Left" Margin="248,10,0,472.6" VerticalAlignment="Center" Width="174" Height="51" Click="Button_Click"/>
+
+        <Button x:Name="btnAddQuestion" Background="#b19cd9" Content="Add New Question" HorizontalAlignment="Left" Margin="438,10,0,472.6" VerticalAlignment="Center" Width="174" Height="51" Click="BtnAddQuestion_Click"/>
+
+        <Button x:Name="btnRemoveQuestion" Background="#b19cd9" Content="Remove Question" HorizontalAlignment="Left" Margin="630,10,0,472.6" VerticalAlignment="Center" Width="174" Height="51" Click="BtnRemoveQuestion_Click"/>
+
+        <Button x:Name="btnSubmitTest" Background="#b19cd9" Content="Submit Test" HorizontalAlignment="Left" Margin="822,10,0,472.6" VerticalAlignment="Center" Width="174" Height="51" Click="BtnSubmitTest_Click"/>
+
+        <TextBox x:Name="txtAnswer1" FontSize="15" Background="Transparent" BorderBrush="Black" BorderThickness="0,3,0,3" HorizontalAlignment="Left" Height="85" Margin="264,270,0,0" TextWrapping="Wrap" Text="Please Insert your Answer Here." VerticalAlignment="Top" Width="353" MouseDoubleClick="TxtQuestion_MouseDown" TextChanged="textChanged" MaxLength="50"/>
+        <RadioButton x:Name="radAnswer1" Content="Answer 1" FontSize="15" HorizontalAlignment="Left" Margin="264,241,0,0" VerticalAlignment="Top" Height="22" Width="359"/>
+        <TextBox x:Name="txtAnswer2" FontSize="15" Background="Transparent" BorderBrush="Black" BorderThickness="0,3,0,3" HorizontalAlignment="Left" Height="85" Margin="643,270,0,0" TextWrapping="Wrap" Text="Please Insert your Answer Here." VerticalAlignment="Top" Width="353" MouseDoubleClick="TxtQuestion_MouseDown" TextChanged="textChanged" MaxLength="50"/>
+        <RadioButton x:Name="radAnswer2" Content="Answer 2" FontSize="15" HorizontalAlignment="Left" Margin="643,241,0,0" VerticalAlignment="Top" Height="22" Width="360"/>
+        <TextBox x:Name="txtAnswer3" FontSize="15" Background="Transparent" BorderBrush="Black" BorderThickness="0,3,0,3" HorizontalAlignment="Left" Height="85" Margin="264,412,0,0" TextWrapping="Wrap" Text="Please Insert your Answer Here." VerticalAlignment="Top" Width="353" MouseDoubleClick="TxtQuestion_MouseDown" TextChanged="textChanged" MaxLength="50"/>
+        <RadioButton x:Name="radAnswer3" Content="Answer 3" FontSize="15" HorizontalAlignment="Left" Margin="264,385,0,0" VerticalAlignment="Top" Height="22" Width="359"/>
+        <TextBox x:Name="txtAnswer4" FontSize="15" Background="Transparent" BorderBrush="Black" BorderThickness="0,3,0,3" HorizontalAlignment="Left" Height="85" Margin="643,412,0,0" TextWrapping="Wrap" Text="Please Insert your Answer Here." VerticalAlignment="Top" Width="353" MouseDoubleClick="TxtQuestion_MouseDown" TextChanged="textChanged" MaxLength="50"/>
+        <RadioButton x:Name="radAnswer4" Content="Answer 4" FontSize="15" HorizontalAlignment="Left" Margin="643,385,0,0" VerticalAlignment="Top" Height="22" Width="360"/>
+
+        <TextBox x:Name="txtQuestion" FontSize="15" Background="Transparent" BorderBrush="Black" BorderThickness="0,3,0,3" HorizontalAlignment="Left" Height="85" Margin="264,142,0,0" TextWrapping="Wrap" Text="Please Insert your Question Here." VerticalAlignment="Top" Width="732" MouseDoubleClick="TxtQuestion_MouseDown" TextChanged="textChanged" MaxLength="100"/>
+
+
+
+
+    </Grid>
+</Window>

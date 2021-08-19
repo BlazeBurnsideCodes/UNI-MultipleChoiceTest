@@ -1,0 +1,58 @@
+﻿<Window x:Class="MultipleChoiceTest.Lecturer.HomePageL"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MultipleChoiceTest.Lecturer"
+        mc:Ignorable="d"
+        Title="Home"
+        Height="563" MaxHeight="563" MinHeight="563" 
+        Width="1025" MaxWidth="1025" MinWidth="1025"
+        WindowStartupLocation="CenterScreen" Closed="Window_Closed" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="347*"/>
+            <ColumnDefinition Width="672*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="1,0" EndPoint="0,1">
+                <GradientStop Color="#0fbed8" Offset="0.0" />
+                <GradientStop Color="LimeGreen" Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <TextBox Name="txtTestName" Text="Insert Test Name" Background="Transparent" BorderBrush="Black" BorderThickness="0,3,0,3" HorizontalAlignment="Left" Height="45" Margin="325,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="421" FontSize="18" Grid.ColumnSpan="2" MouseDoubleClick="TxtTestName_MouseDoubleClick" MaxLength="50" VerticalContentAlignment="Center"/>
+        <ListBox Name="lstTestView" Background="Transparent" BorderBrush="Black" BorderThickness="3" HorizontalAlignment="Left" Height="470" Margin="10,54,0,0" VerticalAlignment="Top" Width="290" />
+
+        <Button Name="btnCreateTest" Background="#b19cd9" Content="Create" HorizontalAlignment="Left" Margin="437.6,54,0,0" VerticalAlignment="Top" Width="224"  FontSize="20" Height="45" Click="BtnCreateTest_Click" Grid.Column="1"/>
+        <Label Content="Create a new Test" HorizontalAlignment="Left" Margin="324,10,0,0" VerticalAlignment="Top" Width="350" FontSize="20" Height="43" Grid.ColumnSpan="2"/>
+        <Rectangle Height="373" Margin="329,128,0,0" Stroke="Black" StrokeThickness="3" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="663" Grid.ColumnSpan="2">
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="1,0" EndPoint="0,1">
+                    <GradientStop Color="#0fbed8" Offset="0.0" />
+                    <GradientStop Color="LimeGreen" Offset="1.0" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+
+        </Rectangle>
+        <Label Content="Edit Test" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="41.2,164,0,0" VerticalAlignment="Top" FontSize="20" Height="42" Width="200" Grid.Column="1"/>
+        <Button Name="btnEdit" Content="Click Me" Background="#b19cd9"  HorizontalAlignment="Left" Margin="41.2,206,0,0" VerticalAlignment="Top" Width="200" FontSize="20" Height="74" Grid.Column="1" Click="BtnEdit_Click" />
+        <Label Content="View Memo" HorizontalAlignment="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="393.2,164,0,0" VerticalAlignment="Top" FontSize="20" Height="42" Width="200" Grid.Column="1"/>
+        <Button Name="btnViewMemo" Content="Click Me" Background="#b19cd9" Margin="0,206,78.4,0" VerticalAlignment="Top" FontSize="20" Height="74" HorizontalAlignment="Right" Width="200" Grid.Column="1" Click="BtnViewMemo_Click"/>
+        <Label Content="View Test Marks" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="41.2,345,0,0" VerticalAlignment="Top" FontSize="20" Height="42" Width="200" Grid.Column="1"/>
+        <Button Name="btnViewTestMarks" Content="Click Me" Background="#b19cd9" HorizontalAlignment="Left" Margin="41.2,387,0,0" VerticalAlignment="Top" Width="200" FontSize="20" Height="74" Grid.Column="1" Click="BtnViewTestMarks_Click"/>
+        <Label Content="View Student Info" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="393.2,345,0,0" VerticalAlignment="Top" FontSize="20" Height="42" Width="200" Grid.Column="1"/>
+        <Button Name="btnViewStudentInfo" Content="Click Me" Background="#b19cd9" HorizontalAlignment="Left" Margin="393.2,387,0,0" VerticalAlignment="Top" Width="200" FontSize="20" Height="74" Grid.Column="1" Click="BtnViewStudentInfo_Click"/>
+        <Label Content="Tests" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="290" FontSize="20" Height="44"/>
+        <ComboBox Name="cmbModule" FontSize="15" Grid.Column="1" HorizontalAlignment="Left" Margin="437.6,10,0,0" VerticalAlignment="Top" Width="224" Height="43" Background="Transparent"/>
+
+    </Grid>
+</Window>

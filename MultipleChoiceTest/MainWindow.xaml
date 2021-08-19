@@ -1,0 +1,61 @@
+﻿<Window x:Class="MultipleChoiceTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MultipleChoiceTest"
+        mc:Ignorable="d"
+        WindowStyle="ThreeDBorderWindow"
+        Title="Login Page"
+        Height="362" Width="590" 
+        MinHeight="362" MinWidth="590"
+        MaxHeight="362" MaxWidth="590"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+        >
+    <Border BorderBrush="DarkGray" BorderThickness="20,20,20,20">
+        <StackPanel Background="LightGray">
+            
+            <Label Content="Sign In" 
+                    FontSize="40"
+                    HorizontalAlignment="Center"
+                   Padding="0,0,0,30"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+                <Label Content="Username" 
+                    FontSize="25"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Grid.Column="0" Grid.Row="0"/>
+                <TextBox  
+                    Name="txtUsername"
+                    FontSize="20"
+                    Grid.Column="1" Grid.Row="0"
+                    Margin="0.4,10,0,7.2"
+                    Padding="10,0,0,0" 
+                    HorizontalAlignment="Center" Width="328" VerticalAlignment="Center"/>
+                <Label Content="Password" 
+                    FontSize="25"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Grid.Column="0" Grid.Row="1"/>
+                <TextBox  
+                    Name="txtPassword"
+                    FontSize="20"
+                    Grid.Column="1" Grid.Row="1"
+                    Margin="0.4,10,0,7.2"
+                    Padding="10,0,0,0" 
+                    HorizontalAlignment="Center" Width="328" VerticalAlignment="Center"/>
+            </Grid>
+            <Button x:Name="btnLogin" Content="Login"  Height="30" Width="100" Margin="222,1,222,20" Click="BtnLogin_Click"/>
+            <Button x:Name="btnRegister" Content="Register"  Height="30" Width="100" Margin="222,0,222,0" Click="BtnRegister_Click"/>
+
+        </StackPanel>
+    </Border>
+</Window>

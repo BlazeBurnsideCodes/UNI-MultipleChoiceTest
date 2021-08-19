@@ -1,0 +1,25 @@
+﻿<Window x:Class="MultipleChoiceTest.Student.ViewMarks"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MultipleChoiceTest.Student"
+        mc:Ignorable="d"
+        Title="ViewMarks"  Height="563" MaxHeight="563" MinHeight="563" 
+        Width="1025" MaxWidth="1025" MinWidth="1025"
+        WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded"
+        Closed="Window_Closed">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="1,0" EndPoint="0,1">
+                <GradientStop Color="#0fbed8" Offset="0.0" />
+                <GradientStop Color="LimeGreen" Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label Content="Module Marks" FontSize="30" BorderBrush="Black" BorderThickness="0,0,0,3" Background="Transparent" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top" Width="204"/>
+        <ListBox Name="lstModules" FontSize="12" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Height="416" Margin="26,78,0,0" BorderBrush="Black" BorderThickness="3" VerticalAlignment="Top" Width="234" Background="Transparent" SelectionChanged="LstModules_SelectionChanged"/>
+        <TextBox Name="txtMarks" FontSize="20" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Height="416" Margin="306,78,0,0" BorderBrush="Black" BorderThickness="0,3,0,3" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="663" Background="Transparent" IsReadOnly="True" />
+
+    </Grid>
+</Window>
