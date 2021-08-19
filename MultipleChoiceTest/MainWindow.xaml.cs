@@ -37,7 +37,7 @@ namespace MultipleChoiceTest
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
             DLogin signInTest = new DLogin(); //Opens a link to the DatabaseLogin class
-            string path = signInTest.signInCheck(txtUsername.Text, txtPassword.Text);   //Tests the username and password
+            string path = signInTest.signInCheck(txtUsername.Text, txtPassword.Password);   //Tests the username and password
 
             switch (path)   //Finds which path the user will go down
             {
@@ -54,7 +54,7 @@ namespace MultipleChoiceTest
                     LecturerSignIn.Show();  //Shows the lecturers' page
                     Hide(); //Hides the current page
                     txtUsername.Text = "";  //Sets the login page back to default 
-                    txtPassword.Text = "";
+                    txtPassword.Password = "";
                     break;
 
                 case "Student": //The student path will send the user to the users' half of the application
@@ -66,7 +66,7 @@ namespace MultipleChoiceTest
                     StudentSignIn.Show();  //Shows the students' page
                     Hide(); //Hides the current page
                     txtUsername.Text = "";  //Sets the login page back to default 
-                    txtPassword.Text = "";
+                    txtPassword.Password = "";
                     break;
             }
         }

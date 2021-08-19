@@ -84,7 +84,7 @@ namespace MultipleChoiceTest.Student
                 showMemo.Show();
                 Hide();
             }
-            catch
+            catch(NullReferenceException)
             {
                 MessageBox.Show("Please select a test from the test taken list.", "Selection error:");   //Shows an error message if no test was selected
             }
@@ -120,12 +120,8 @@ namespace MultipleChoiceTest.Student
             foreach (string test in tests)  //Loops for each item in the list
             {
                 if(!takenTests.Contains(test))
-                {
                     lstTestView.Items.Add(test);    //Adds a line to the list
-                }
             }
-
-            
         }
 
         /*

@@ -54,7 +54,7 @@ namespace MultipleChoiceTest.Register
                     string adminUsername = txtAdminUsername.Text;
                     string adminPassword = txtAdminPassword.Text;
 
-                    if(adminUsername.Equals("Admin") && adminPassword.Equals("Admin"))
+                    if(adminUsername.Equals("Admin") && adminPassword.Equals("Admin")) //Hardcoded for display purposes only
                     {
                         UserInformation lecturerCreate = new UserInformation(this, username, password, 1);
                         lecturerCreate.Show();

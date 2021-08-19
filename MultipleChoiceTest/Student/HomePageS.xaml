@@ -16,7 +16,7 @@
                 <GradientStop Color="LimeGreen" Offset="1.0" />
             </LinearGradientBrush>
         </Grid.Background>
-        <Rectangle Height="419" Margin="340,80,0,0" Stroke="Black" StrokeThickness="3" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="644">
+        <Rectangle Height="217" Margin="340,80,0,0" Stroke="Black" StrokeThickness="3" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="644">
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="1,0" EndPoint="0,1">
                     <GradientStop Color="#0fbed8" Offset="0.0" />
@@ -34,17 +34,34 @@
 
         </Rectangle>
         <Label Content="Take Test" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="387,106,0,0" VerticalAlignment="Top" FontSize="20" Height="49" Width="200"/>
-        <Button Name="btnStartTest" Content="Button" Background="#b19cd9"  HorizontalAlignment="Left" Margin="387,155,0,0" VerticalAlignment="Top" Width="200" FontSize="20" Height="87" Click="BtnStartTest_Click"/>
+        <Button Name="btnStartTest" Content="o" Background="#b19cd9"  HorizontalAlignment="Left" Margin="387,155,0,0" VerticalAlignment="Top" Width="200" FontSize="20" Height="87" Click="BtnStartTest_Click"/>
         <Label Content="View Memo" HorizontalAlignment="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="739,106,0,0" VerticalAlignment="Top" FontSize="20" Height="49" Width="200"/>
-        <Button Name="btnViewMemo" Content="Button" Background="#b19cd9" Margin="0,155,79.4,0" VerticalAlignment="Top" FontSize="20" Height="87" HorizontalAlignment="Right" Width="200" Click="BtnViewMemo_Click"/>
-        <Label Content="View Marks" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="569,318,0,0" VerticalAlignment="Top" FontSize="20" Height="49" Width="200"/>
-        <Button Name="btnViewMarks" Content="Button" Background="#b19cd9" HorizontalAlignment="Left" Margin="569,367,0,0" VerticalAlignment="Top" Width="200" FontSize="20" Height="87" Click="BtnViewMarks_Click"/>
+        <Button Name="btnViewMemo" Content="o" Background="#b19cd9" Margin="0,155,79.4,0" VerticalAlignment="Top" FontSize="20" Height="87" HorizontalAlignment="Right" Width="200" Click="BtnViewMemo_Click"/>
         <Label Content="Tests" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="309" FontSize="20" Height="44"/>
         <Label Content="Options" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="346,28,0,0" VerticalAlignment="Top" Width="634" FontSize="20" Height="50"/>
         <Label Content="Taken Tests" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="10,269,0,0" VerticalAlignment="Top" Width="309" FontSize="20" Height="44"/>
 
         <ListBox x:Name="lstTestView" Background="Transparent" BorderBrush="Black" BorderThickness="3" HorizontalAlignment="Left" Height="188" Margin="10,54,0,0" VerticalAlignment="Top" Width="309"/>
         <ListBox x:Name="lstTestTakenView" Background="Transparent" BorderBrush="Black" BorderThickness="3" HorizontalAlignment="Left" Height="188" Margin="10,313,0,0" VerticalAlignment="Top" Width="309"/>
+        <Rectangle Height="217" Margin="340,302,0,0" Stroke="Black" StrokeThickness="3" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="644">
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="1,0" EndPoint="0,1">
+                    <GradientStop Color="#0fbed8" Offset="0.0" />
+                    <GradientStop Color="LimeGreen" Offset="1.0" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+
+        </Rectangle>
+        <Label Content="View Marks" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="569,318,0,0" VerticalAlignment="Top" FontSize="20" Height="49" Width="200"/>
+        <Button Name="btnViewMarks" Content="o" Background="#b19cd9" HorizontalAlignment="Left" Margin="569,367,0,0" VerticalAlignment="Top" Width="200" FontSize="20" Height="87" Click="BtnViewMarks_Click"/>
 
     </Grid>
 </Window>
